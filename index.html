@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+  <title>Recipe Book</title>
+</head>
+<body>
+    <div class="container">
+      <div class="menu">
+        <div class="menu-icon" onclick="toggleDrawer()"><i class="fa-solid fa-bars"></i></div>
+        <h1>Recipe Book</h1>
+      </div>
+      <div class="drawer" id="drawer">
+        <input type="text" id="search" placeholder="Search">
+        <button onclick="searchRecipe()">Search</button>
+
+        <h3>Add Recipe</h3>
+        <form id = "form">
+          <label for="name">Name</label>
+          <input type="text" id="name" placeholder="Name" required>
+          <br/>
+          <label for="ingredients">Ingredients</label>
+          <textarea id="ingredients" placeholder="Ingredients" required></textarea>
+          <br/>
+          <label for="directions">Directions</label>
+          <textarea id="directions" placeholder="Directions" required></textarea>
+          <br/>
+          <input type="file" id="img">
+          <button type="submit">Add</button>
+        </form>
+
+      </div>
+      <div id="recipe-list" class="recipe-list"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
